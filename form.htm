@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<style>
+    .form-label {
+    margin-bottom: 0.1rem;
+} 
+</style>
+</head>
+<body  >
+    <form action="action.php" method="post" >
+        <div class="mt-1 row p-2">
+            <div class="col-md-4 py-2 ">
+                <label for="taxnum" class="form-label text-secondary">Vergi Numarası</label>
+                <input type="number" name="taxnum" id="taxnum" class="form-control" min="0" max="99999999999">
+            </div>
+            <div class="col-md-4 py-2 ">
+                <label for="currency" class="form-label text-secondary">Para Birimi</label> 
+                    <select name="currency" id="currency" class="form-select">
+                        <option>Euro</option>
+                        <option>Dollar</option>
+                        <option>Lira</option>
+                    </select>
+            </div>
+            <div class="col-md-4 py-2 ">
+                <label for="pricetype" class="form-label text-secondary">Fiyat Tipi</label>
+                     <select name="pricetype" id="pricetype" class="form-select">
+                        <option>Endkunde</option>
+                </select>
+            </div>
+            <div class="col-md-12py-2 ">
+                <label for="taxtype" class="form-label text-secondary">Vergi Türü</label>
+                <select name="taxtype" id="taxtype" class="form-select">
+                    <option>zzgl, 19% USt. auf</option>
+                </select>
+            </div>
+            <div class="col-md-4 py-2 ">
+                <label for="taxrate" class="form-label text-secondary">Vergi Oranı</label>
+                <input type="number" name="taxrate" id="taxrate" class="form-control" min="0" max="100">
+            </div> 
+            <div class="col-md-4 ">
+                <label for="paymethod" class="form-label text-secondary">Ödeme Yöntemi</label>
+                    <select name="paymethod" id="paymethod" class="form-select">
+                     <option>Paypal</option>
+                    </select>
+            </div>
+            <div class="col-md-4 ">
+                <label for="deliverymethod" class="form-label text-secondary">Teslimat Yöntemi</label>
+                     <select name="deliverymethod" id="deliverymethod" class="form-select">
+                        <option>Liefrung per UPS</option>
+                    </select>
+            </div>
+            <div class="col-md-4 ">
+                <label for="selldiscount" class="form-label text-secondary">Satış İndirimi</label>
+                <input type="number" name="selldiscount" id="selldiscount" class="form-control" min="0" max="100">
+            </div>
+            <div class="col-md-4 ">
+                <label for="buydiscount" class="form-label text-secondary">Satın Alma İndirimi</label>
+                <input type="number" name="buydiscount" id="buydiscount" class="form-control" min="0" max="100">   
+            </div>
+
+            <div class="col-md-12 py-2 d-flex justify-content-end ">
+                <div class="btn-group me-1">
+                    <button class="btn btn-warning "><i class="bi bi-x-lg"></i> İptal </button>
+                </div>
+                <div class="btn-group">
+                  <button class="btn btn-success "><i class="bi bi-check"></i> Kaydet </button>
+                    <!-- Eklemeler yapabilirsiniz -->
+                </div>
+            </div>
+        </div>
+            
+    </form>
+</body>
+</html>
